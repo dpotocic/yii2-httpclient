@@ -309,7 +309,7 @@ class Message extends Component
         }
         $headers = [];
         foreach ($this->getHeaders() as $name => $values) {
-            $name = str_replace(' ', '-', ucwords(str_replace('-', ' ', $name)));
+            $name = str_replace(' ', '-', $name);
             foreach ($values as $value) {
                 $headers[] = "$name: $value";
             }
