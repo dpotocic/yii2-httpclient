@@ -86,7 +86,7 @@ class Message extends Component
                             $parts = explode(' ', $rawHeader, 3);
                             $headerCollection->add('http-code', $parts[1]);
                         } elseif (($separatorPos = strpos($rawHeader, ':')) !== false) {
-                            $name = strtolower(trim(substr($rawHeader, 0, $separatorPos)));
+                            $name = trim(substr($rawHeader, 0, $separatorPos));
                             $value = trim(substr($rawHeader, $separatorPos + 1));
                             $headerCollection->add($name, $value);
                         } else {
